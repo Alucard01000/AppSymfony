@@ -21,7 +21,7 @@ if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {
 }
 
 $kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
-$request = Request::createFromGlobals();
-$response = $kernel->handle($request);
-$response->send();
+$request = Request::createFromGlobals();  // créer un objet Request => $request
+$response = $kernel->handle($request);  // le kernel va s'occuper de cet objet et créer une réponse
+$response->send();  // envoi de la réponse HTTP pour l'envoyer
 $kernel->terminate($request, $response);

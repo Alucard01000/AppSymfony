@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}  {# on utilise le template de base 'base.html.twig' qu'on va ensuite étendre !  #}
+
+{% block title %}  {# on étend les block en leurs mettant des données : block title et block body #}
+    Hello
+{% endblock %}
+
+{% block body %}  
+{% if name is not null %}  {# si name est défini et différent de null, on affiche le nom #}
+    <p>Hello {{ name | capitalize }} !</p>
+{% endif %}
+
+
+
+<ul>
+    {% for item in utilisateurs %}
+        <li>{{item | upper}}</li>
+    {% endfor %}
+
+</ul>
+
+<a href=" {{path('hellotest')}} ">TEST</a>
+
+{% endblock %}

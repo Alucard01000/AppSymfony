@@ -1,5 +1,5 @@
 
-###> symfony/framework-bundle ###
+###> symfony/framework-bundle ### indique ce qui doit être ignoré par git 
 /.env.local
 /.env.local.php
 /.env.*.local

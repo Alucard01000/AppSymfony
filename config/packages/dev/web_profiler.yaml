@@ -1,0 +1,6 @@
+web_profiler:     # le web profiler sera chargé en environnement de dev car il est mis dans le dossier "dev" (idem pour l'environnement test car mis dans le dossiee test), mais pas pour l'environnement prod !
+    toolbar: true
+    intercept_redirects: false
+
+framework:
+    profiler: { only_exceptions: false }

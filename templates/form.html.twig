@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}  {# on utilise le template de base 'base.html.twig' qu'on va ensuite étendre !  #}
+
+{% block title %}  {# on étend les block en leurs mettant des données : block title et block body #}
+    User
+{% endblock %}
+
+{% block body %}  
+
+<h2>Formulaire utilisateur</h2>
+{{ form(Userform) }}   {# on affiche le formulaire complet #}
+
+{% endblock %}
